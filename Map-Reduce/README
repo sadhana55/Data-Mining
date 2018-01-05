@@ -1,0 +1,37 @@
+In this project, we will write MapReduce programs in Python. 
+We use Apache Hadoop, an open-source implementation of Google’s proprietary MapReduce system. 
+Since we don’t have a cluster to use , we will set up a single-node Hadoop environment on your own personal computer. 
+
+The programs we write will work in a real cluster. 
+It is just that in the single-node setup you won’t be able to observe performance advantage against a centralized system. 
+
+In this project, we will use the following data files. 
+
+* retail: This folder contains 1 data file, retail.dat. It contains a transaction table.
+
+Hadoop Programs in Python
+
+Hadoop was implemented for Java programs. 
+To run Programs in Python, we use Hadoop Streaming
+
+Hadoop streaming is explained in the below link:
+https://hadoop.apache.org/docs/r1.2.1/streaming.html
+
+Step 1: Write mapper and reducer code in mapper.py and reducer,py
+Step2: Make the Python file executables by the following command
+
+chmod +x /usr/lib/hue/P3/wordcount/*.py
+
+TASK:
+Implement the Apriori algorithm for frequent itemset mining. 
+Beak down the task into several steps. 
+
+For each step,Use Python to write a mapper and a reducer that will execute in Hadoop streaming.
+
+The transactions are in file retail.dat inside folder retail. 
+Each line is a transaction, i.e., a set of items purchased together in the transaction. 
+
+Task 1: Find frequent 2-itemsets
+Task 2 Step 1: Find candidate 3-itemsets by joining frequent 2-itemsets
+Task 2 Step 2: Prune candidate 3-itemsets
+Task 2 Step 3: Report frequent 3-itsesets.
